@@ -15,4 +15,3 @@ console.log(c);
 // curly braces are scopes {}
 
 
-//Hi this is the new update
