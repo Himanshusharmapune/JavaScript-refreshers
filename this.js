@@ -4,7 +4,7 @@ const user = {
     age: 23,
 
     WelcomeMessage: function(){
-        console.log(`${this.username} , welcome to the website` );
+        console.log(`${this.username}${this.age} , welcome to the website` );
         
     }
 }
@@ -13,5 +13,5 @@ user.WelcomeMessage()
 
 // user.WelcomeMessage({
 //      username:"Himanshu",
-//     age: 23
+//     age: 23,
 // })
