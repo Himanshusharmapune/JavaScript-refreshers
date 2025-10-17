@@ -30,10 +30,10 @@
 // }
 
 // Continue
-for(let index = 1; index<=20; index++){
-    if(index==10){
-        console.log("Ten is found");    
-        continue;
-}
-    console.log(index);
-}
+// for(let index = 1; index<=20; index++){
+//     if(index==10){
+//         console.log("Ten is found");    
+//         continue;
+// }
+//     console.log(index);
+// }
