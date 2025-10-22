@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 JavaScript Refreshers
 
 A comprehensive collection of JavaScript fundamentals designed for quick revision and interview preparation. This repository contains concise, practical code examples covering essential JavaScript concepts.
@@ -130,3 +131,7 @@ This project is open source and available for educational purposes.
 **Happy Learning! 🎉**
 
 *Last Updated: October 2025*
+=======
+# JavaScript-refreshers
+This is a revision of JS.
+>>>>>>> 14d8a854bcf5f285f4b86fe41c597caab5f1fda5

@@ -63,9 +63,9 @@
 // map.set('age',30);
 // map.set('city','New York');
 
-//console.log(map); //prints whole map
+// console.log(map); //prints whole map
 
-//console.log(map.get('name')); //.get gets value of key passed in it
+// console.log(map.get('name')); //.get gets value of key passed in it
 //console.log(map.get('age'));
 //console.log(map.get('city'));
 
@@ -89,22 +89,22 @@
 // }
 
 //For in loop 
-const obj = {
-    name: 'Alice',
-    age: 25,
-    city: 'Los Angeles'
-};
+// const obj = {
+//     name: 'Alice',
+//     age: 25,
+//     city: 'Los Angeles'
+// };
 
-for(const key in obj){
-    console.log(`${key}`); //prints only keys
-    console.log(`${key} : ${obj[key]}`); //prints key value pairs
-}
+// for(const key in obj){
+//     console.log(`${key}`); //prints only keys
+//     console.log(`${key} : ${obj[key]}`); //prints key value pairs
+// }
 
 
 //Forin loop is used to iterate over objects( as for of loop is used to iterate over arrays and maps and strings) but we can use for in loop for arrays as well.
 //for eg
-const arr = [10,20,30,40,50];
-for(const index in arr){
-    console.log(`Index is ${index}`);
-}
+// const arr = [10,20,30,40,50];
+// for(const index in arr){
+//     console.log(`Index is ${index}`);
+// }
 //the key diference between for in and for of loop is that for in loop gives index of array elements whereas for of loop gives the value of array elements.
