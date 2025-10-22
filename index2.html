@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating new Element</title>
+</head>
+<body>
+   <ul class='languages'>
+         <li>Python</li>
+    </ul>
+        
+
+</body>
+<script>
+    //   const newDiv = document.createElement('div')
+    //   console.log(newDiv);
+    //     newDiv.className = 'child';
+    //     newDiv.id = 'child1';
+    //     newDiv.setAttribute('title', 'mytitle');
+    //      newDiv.style.backgroundColor='red';
+    //     newDiv.style.padding='10px';
+    //    const MyText =  document.createTextNode('This is my first element');
+    //    newDiv.appendChild(MyText);
+    //    document.body.appendChild(newDiv);
+
+        
+        //   function newlangauge(languageName){
+        //         const li = document.createElement('li');
+        //         li.innerHTML= `${languageName}`
+        //         document.querySelector('.languages').appendChild(li)
+        //   }     
+          newlangauge("Javascript");
+          newlangauge("Java");
+        //   newlangauge("C++");
+
+
+          function newlangauge(languageName){
+                const li = document.createElement('li');
+                li.appendChild(document.createTextNode(languageName))
+                document.querySelector('.languages').appendChild(li)   
+          }  
+          newlangauge("C++");
+
+          //Replacing the second elemet - Javacript with MOJO
+          const newEle = document.createElement('li');  // creates empty <li></li>
+          newEle.textContent = "MOJO";                  // not the li that was created has MOJO init.....<li>MOJO</li>
+          const selectSecondChild = document.querySelector("li:nth-child(2)"); //here we are selecting the second child that is javascript
+          selectSecondChild.replaceWith(newEle);        //here the selected child that is Javascript is getting replaced by MOJO
+
+
+
+
+        //Replacing an element by changing the Outer Html 
+        const changingFirstEle = document.querySelector("li:first-child");
+        changingFirstEle.outerHTML = "<li>Rust</li>";
+
+        const removinglastEle = document.querySelector("li:last-child");
+        removinglastEle.remove()
+
+        //important 
+        //textContent → Just the words.
+        //innerHTML → The inside HTML and text.   
+        //outerHTML → The entire tag and whatever is inside it.   
+        //.remove -> remove selected element
+</script>
+
+</html>
