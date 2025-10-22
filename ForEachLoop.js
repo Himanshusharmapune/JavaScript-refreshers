@@ -1,3 +1,5 @@
+//ForEach Loop in JavaScript is used to iterate over elements of an array. It executes a provided function once for each array element.
+
 // const a = [1,2,3,4,5]
 // a.forEach(function(b){
 //     console.log(b)
@@ -18,3 +20,14 @@
 // arr.forEach((item)=>{
 //     console.log(item.name)
 // })
+
+const num1 = [1,2,3,4,5];
+const num2 =[];
+
+num1.forEach((num)=>{
+    if(num>2){
+        num2.push(num);
+    }
+})
+
+console.log(num2);
