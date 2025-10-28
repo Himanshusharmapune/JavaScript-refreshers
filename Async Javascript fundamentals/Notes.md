@@ -35,4 +35,15 @@
 - Ensures non-blocking, responsive JS execution.
 
 ## fetch()
-- fetch() is a modern JavaScript method used to make HTTP requests (like getting data from APIs, sending data to servers) and its priority is high
+- fetch() is a modern JavaScript method used to make HTTP requests (like getting data from APIs, sending data to servers) and its priority is high                       
+
+---
+if you are using:
+--SetTimeout
+--setIntervel
+--promises
+--fetch
+--axios
+--XMLHttpRequest
+
+then it means the code is for Asynchronus JS
