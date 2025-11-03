@@ -12,65 +12,80 @@
 <script>
     //**promises**
 //eg1
-var ans = new Promise((res, rej) => {
-    if (false) {
-        return res();
-    } else {
-        return rej();
-    }
-});
+// var ans = new Promise((res, rej) => {
+//     if (false) {
+//         return res();
+//     } else {
+//         return rej();
+//     }
+// });
 
-ans
-    .then(function () {
-        console.log("resolve hogaya tha!");
-    })
-    .catch(function () {
-        console.log("reject hua tha!");
-    });
+// ans
+//     .then(function () {
+//         console.log("resolve hogaya tha!");
+//     })
+//     .catch(function () {
+//         console.log("reject hua tha!");
+//     });
 
-//eg2
-var ans = new Promise((res,rej)=>{
-    var n = Math.floor(Math.random()*10);
+// //eg2
+// var ans = new Promise((res,rej)=>{
+//     var n = Math.floor(Math.random()*10);
 
-    if(n<5){
-        return res();
-    }
-    else{
-        return rej();
-    }
+//     if(n<5){
+//         return res();
+//     }
+//     else{
+//         return rej();
+//     }
+// })
+
+// ans
+// .then(function(){
+//     console.log("below");
+// })
+// .catch(function(){
+//     console.log("above");
+// })
+
+
+// //e3
+// var p1 = new Promise((res,rej)=>{
+//     return res("task one done")
+// })
+
+//   var p2 = p1.then((data)=>{
+//     console.log(data)
+//     return new Promise((res,rej)=>{
+//     return res("task two done")
+// })
+// })
+
+// var p3 = p2.then((data)=>{
+//     console.log(data)
+//     return new Promise((res,rej)=>{
+//         return res("task three done")
+//     })
+// })
+
+// p3.then((data)=>{
+//     console.log(data)
+// })   
+
+//e4
+
+const newPromise = new Promise(function(resolve,reject){
+    setTimeout(()=>{
+        console.log("Async is completed")
+        resolve();
+    },1000)
+    
 })
 
-ans
-.then(function(){
-    console.log("below");
-})
-.catch(function(){
-    console.log("above");
+newPromise.then(function(){
+    console.log("Promised trigged")
 })
 
-
-//e3
-var p1 = new Promise((res,rej)=>{
-    return res("task one done")
-})
-
-  var p2 = p1.then((data)=>{
-    console.log(data)
-    return new Promise((res,rej)=>{
-    return res("task two done")
-})
-})
-
-var p3 = p2.then((data)=>{
-    console.log(data)
-    return new Promise((res,rej)=>{
-        return res("task three done")
-    })
-})
-
-p3.then((data)=>{
-    console.log(data)
-})   
 
 
 </script>
