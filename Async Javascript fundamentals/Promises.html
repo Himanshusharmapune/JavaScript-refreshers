@@ -74,89 +74,116 @@
 
 //e4
 
-const newPromise = new Promise(function(resolve,reject){
-    setTimeout(()=>{
-        console.log("Async is completed")
-        resolve();
-    },1000)
+// const newPromise = new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         console.log("Async is completed")
+//         resolve();
+//     },1000)
     
-})
+// })
 
-newPromise.then(function(){
-    console.log("Promised trigged")
-})
+// newPromise.then(function(){
+//     console.log("Promised trigged")
+// })
 
-//second way of wrting promise 
-new Promise(function(resolve,reject){
-    setTimeout(()=>{
-        console.log("Async2 is completed")
-        resolve();
-    },1000)
-}).then(function(){
-        console.log("Promised2 trigged")
-})
+// //second way of wrting promise 
+// new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         console.log("Async2 is completed")
+//         resolve();
+//     },1000)
+// }).then(function(){
+//         console.log("Promised2 trigged")
+// })
 
-//sending data using resolve()
-const SendData = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        resolve({unsername: "Himanshu", email: "himanshusharmapune@gmail.com"})
-    },1000)
-})
+// //sending data using resolve()
+// const SendData = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         resolve({unsername: "Himanshu", email: "himanshusharmapune@gmail.com"})
+//     },1000)
+// })
 
-SendData.then(function(user){
-    console.log(user);
-})
-
-
-//using reject 
-const PromiseOne = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        let error = false;
-        if(!error){
-            resolve({username: "pinki", email: "shradhasharma@gmail.co"})
-        }else{
-            reject('ERROR: SOMETHING WENT WRONG')
-        }
-    }, 5000)
-})
-
-PromiseOne
-.then(function(user){
-    console.log(user)
-    return user.username
-})
-.then(function(username){
-    console.log(username);
-})
-.catch(function(theErrorMesssage){
-    console.log(theErrorMesssage)
-})
-.finally(()=>{
-    console.log("Task done")
-}) //finally run's anyhow
+// SendData.then(function(user){
+//     console.log(user);
+// })
 
 
+// //using reject 
+// const PromiseOne = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let error = false;
+//         if(!error){
+//             resolve({username: "pinki", email: "shradhasharma@gmail.co"})
+//         }else{
+//             reject('ERROR: SOMETHING WENT WRONG')
+//         }
+//     }, 5000)
+// })
 
-const PromiseTwo = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        let error = false;
-        if(!error){
-            resolve('Resolved')
-        }else{
-            reject('ERROR AGAYA BRO')
-        }
-    }, 6000)
-})
+// PromiseOne
+// .then(function(user){
+//     console.log(user)
+//     return user.username
+// })
+// .then(function(username){
+//     console.log(username);
+// })
+// .catch(function(theErrorMesssage){
+//     console.log(theErrorMesssage)
+// })
+// .finally(()=>{
+//     console.log("Task done")
+// }) //finally run's anyhow
 
-async function newAsynce() {
+
+
+// const PromiseTwo = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let error = false;
+//         if(!error){
+//             resolve('Resolved')
+//         }else{
+//             reject('ERROR AGAYA BRO')
+//         }
+//     }, 6000)
+// })
+
+// async function newAsynce() {
+//     try {
+//         const response = await PromiseTwo
+//         console.log(response)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+// newAsynce()
+
+async function userData() {
     try {
-        const response = await PromiseTwo
-        console.log(response)
+        const allData= await fetch('https://jsonplaceholder.typicode.com/users')
+        const jsonResponse =await allData.json()
+        console.log(jsonResponse)
     } catch (error) {
-        console.log(error)
+        console.log('Something went wrong')
     }
 }
 
-newAsynce()
+userData();
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response)=>{
+    return response.json()
+})
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=>{
+    console.log(error)
+})
+
 </script>
 </html>
+
+
+
