@@ -3,9 +3,13 @@ const user ={
     surname: "sharma",
 
     printMessage: function(){
-        console.log("How are you?")
+        //console.log("How are you?")
+      //  console.log(`username: ${this.username}`);
+      console.log(this);
     }
+    
+    
 }
 
-console.log(user.username);
+
 console.log(user.printMessage());
