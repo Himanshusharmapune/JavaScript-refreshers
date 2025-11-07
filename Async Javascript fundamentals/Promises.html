@@ -137,27 +137,27 @@
 
 
 
-// const PromiseTwo = new Promise(function(resolve,reject){
-//     setTimeout(function(){
-//         let error = false;
-//         if(!error){
-//             resolve('Resolved')
-//         }else{
-//             reject('ERROR AGAYA BRO')
-//         }
-//     }, 6000)
-// })
+const PromiseTwo = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error = false;
+        if(!error){
+            resolve('Resolved')
+        }else{
+            reject('ERROR AGAYA BRO')
+        }
+    }, 1000)
+})
 
-// async function newAsynce() {
-//     try {
-//         const response = await PromiseTwo
-//         console.log(response)
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
+async function newAsynce() {
+    try {
+        const response = await PromiseTwo
+        console.log(response)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
-// newAsynce()
+newAsynce()
 
 async function userData() {
     try {
