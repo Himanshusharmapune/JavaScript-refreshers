@@ -10,18 +10,18 @@ console.log(mulitpleBy5.prototype)
 
 
 //using and understand the importance of new keyword
-function createUser(username,score){
-    this.username = username;
-    this.score = score;
-}
+// function create User(username,score){
+//     this.username = username;
+//     this.score = score;
+// }
 
-createUser.prototype.printMe = function(){
-    console.log(`${this.username} your score is ${this.score}` );
-}
+// createUser.prototype.printMe = function(){
+//     console.log(`${this.username} your score is ${this.score}` );
+// }
 
-const chai = new createUser("Himanshu", 40)
+// const chai = new createUser("Himanshu", 40)
 
-chai.printMe()
+// chai.printMe()
 
 
 /*lets backtrack and unbserstand, 
@@ -39,3 +39,19 @@ function createUser(username,score){
 
 */
  
+/* 
+    How to objects can access property from each oher?
+    
+*/
+
+
+//removing blank spaces and print the actual length of the string.
+let anotherUsername = "ChaiAurCode    ";
+
+String.prototype.trueLength = function() {
+    console.log(`${this}`);
+    console.log(`${this.name}`);
+    console.log(`True length is: ${this.trim().length}`);
+}
+
+anotherUsername.trueLength();
