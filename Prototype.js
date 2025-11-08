@@ -23,4 +23,19 @@ const chai = new createUser("Himanshu", 40)
 
 chai.printMe()
 
+
+/*lets backtrack and unbserstand, 
+chai.prints() prints whatever is in printMe method
+const chai = new createUser("Himanshu", 40) creates and new constructor that passes value to chai object
+
+createUser.prototype.printMe = function(){
+    console.log(`${this.username} your score is ${this.score}` );
+}  creates a printMe method which prints certain things and the print me is attached to createUser.prototype so that when a new object is created ican use the printMe function too.
+
+function createUser(username,score){
+    this.username = username;
+    this.score = score;
+} creates a function 
+
+*/
  
