@@ -41,7 +41,20 @@ function createUser(username,score){
  
 /* 
     How to objects can access property from each oher?
-    
+    const user ={
+    username: "Himanshu",
+    age:23
+}
+const Teacher = {
+    isAvailable: true,
+    __proto__:user //one way of accessing object property
+}
+
+Teacher.__proto__= user //another way of accessing obj property
+
+//a better/mordern to access property of another obj
+
+Object.setPrototypeOf(user, Teacher)
 */
 
 
@@ -50,8 +63,9 @@ let anotherUsername = "ChaiAurCode    ";
 
 String.prototype.trueLength = function() {
     console.log(`${this}`);
-    console.log(`${this.name}`);
     console.log(`True length is: ${this.trim().length}`);
 }
 
 anotherUsername.trueLength();
+"Himanshu".trueLength();
+"Reeta".trueLength();
