@@ -1,3 +1,4 @@
+//static keyword is used when u dont want the method to be accessed by another class
 class User{
     constructor(username,id){
         this.username = username;
